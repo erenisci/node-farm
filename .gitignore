@@ -1,4 +1,2 @@
 *.env
-procfile
-
 node_modules
