@@ -17,7 +17,7 @@ To run Node-Farm locally:
 1. Clone the repository:
 
    ```bash
-   $ git clone https://github.com/your-username/node-farm.git
+   $ git clone https://github.com/erenisci/node-farm.git
    $ cd node-farm
    ```
 
@@ -34,3 +34,9 @@ To run Node-Farm locally:
    ```
 
 4. Open your web browser and visit http://localhost:8000 to view Node-Farm.
+
+- Environment Variables
+  If you wish to specify a different port, you can set the PORT environment variable before running the server:
+  ```bash
+  PORT=3000
+  ```
