@@ -38,8 +38,11 @@ console.log('Will read file!');
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
+const dotenv = require('dotenv');
 const slugify = require('slugify');
 const replaceTemplate = require('./modules/replaceTemplate');
+
+dotenv.config({ path: './config.env' });
 
 const templateCard = fs.readFileSync(`${__dirname}/templates/template-card.html`, 'utf-8');
 const templateProduct = fs.readFileSync(`${__dirname}/templates/template-product.html`, 'utf-8');
@@ -88,6 +91,8 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8000, '127.0.0.1', () => {
+const PORT = 8000 || process.env.PORT;
+
+server.listen(PORT, '127.0.0.1', () => {
   console.log('Listening to requests on port 8000');
 });
